@@ -1,0 +1,11 @@
+City,Avg_Traffic_Congestion_Index,Avg_Household_Income_INR,Population,EV_Adoption_Index,Existing_Charging_Stations,Charging_Station_Count,Cluster,EV_Station_Recommendation
+Mumbai,83.74,978726,14896698,0.79,12,44,0,Add More EV Stations
+Delhi,87.28,746273,10494758,0.38,30,72,2,Adequate Infrastructure
+Bengaluru,55.25,795247,16127962,0.5,54,9,3,Emerging Market
+Hyderabad,81.93,1314032,14572684,0.89,164,34,0,Add More EV Stations
+Chennai,67.59,931744,13679778,0.52,153,48,2,Adequate Infrastructure
+Kolkata,53.06,631229,14504222,0.67,59,19,3,Emerging Market
+Pune,85.65,803167,6092415,0.35,20,36,2,Adequate Infrastructure
+Ahmedabad,86.61,1335481,19303729,0.55,58,23,0,Add More EV Stations
+Jaipur,58.63,680578,12903986,0.46,61,20,3,Emerging Market
+Lucknow,71.27,862397,5861925,0.57,164,7,1,Monitor Demand

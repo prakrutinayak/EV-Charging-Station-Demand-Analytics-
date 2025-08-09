@@ -1,0 +1,17 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore datasets bigger than ~50MB
+data/*.csv
+
+# Keep only small sample CSVs for demo
+!data/merged_ev_data_sample.csv
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore local config
+*.db
+feedback.txt
