@@ -118,6 +118,7 @@ elif page == "🗄️ SQL Explorer":
 # ✅ Page: Feedback
 elif page == "📝 Feedback":
     st.subheader("💬 Leave Your Feedback or Notes")
+
     st.markdown("We'd love to hear your thoughts, suggestions, or any insights you gathered from this dashboard.")
 
     name = st.text_input("Your Name (Optional)")
@@ -145,14 +146,18 @@ elif page == "📝 Feedback":
             feedback_data = [line.strip().split("|||") for line in lines if "|||" in line]
             feedback_df = pd.DataFrame(feedback_data, columns=["Name", "Feedback"])
             st.dataframe(feedback_df)
-
-            # 🗑️ Add Clear Feedback Button
-            if st.button("🗑️ Clear All Feedback"):
-                open("feedback.txt", "w", encoding="utf-8").close()  # Clears file content
-                st.success("✅ All feedbacks deleted!")
-                st.rerun()  # Refresh the app
         else:
             st.info("No feedbacks submitted yet.")
-
     except FileNotFoundError:
         st.info("Feedback file not found. Be the first to give feedback!")
+
+    # 🔒 Only allow delete if password matches
+    st.markdown("---")
+    admin_pass = st.text_input("Admin Password (for host only)", type="password")
+    if admin_pass == "mypassword123":  # change to your actual password
+
+        if st.button("🗑️ Clear All Feedback"):
+            open("feedback.txt", "w").close()
+            st.success("✅ All feedback deleted successfully!")
+            st.rerun()
+
