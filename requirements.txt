@@ -1,0 +1,5 @@
+echo "streamlit
+pandas
+matplotlib
+scikit-learn
+sqlite3-binary" > requirements.txt
